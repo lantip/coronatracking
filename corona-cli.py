@@ -14,6 +14,7 @@ try:
     from PIL import Image
 except ImportError:
     import Image
+import cv2
 import pytesseract
 import shutil
 from itertools import count
@@ -48,7 +49,11 @@ def saveimage(imej):
     return 'kemkesimage/'+str(skrg)+'.'+ext
 
 def parseimage(image):
-    hasil = pytesseract.image_to_string(Image.open(image))
+    img_cv  = cv2.imread(image)
+    #img_rgb = cv2.cvtColor(img_cv, cv2.COLOR_BGR2RGB)   
+    hasil = pytesseract.image_to_string(img_cv)
+    #data =  pytesseract.image_to_data(Image.open(image))
+    #print(data)
     try:
         hasil = hasil.split('\n')
     except:
