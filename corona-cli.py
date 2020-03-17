@@ -68,6 +68,7 @@ def parseimage(image):
     sembuh = 0
     negatif = 0
     proses = 0
+
     for idx,rs in enumerate(result):
         if idx > 0:
             if 'indonesia' in result[idx-1].lower():
@@ -83,6 +84,8 @@ def parseimage(image):
             if 'negatif' in rs.lower():
                 negatif = rs.split()[-1]
             if 'roses' in rs.lower():
+                proses = rs.split()[-1]
+            if 'prose ' in rs.lower():
                 proses = rs.split()[-1]
 
     return [diperiksa,positif,sembuh,meninggal,negatif,proses]
