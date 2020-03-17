@@ -23,10 +23,15 @@ Usage
     Untuk menampilkan grafik tracking, tentukan layout yang akan dipakai. Pilihannya: kawai, spring, random, shell, planar
     $ python draw.py -l spring
 
+    Untuk mengambil data dari website `https://infeksiemerging.kemkes.go.id/` yang berupa image, gunakan:
+    $ python corona-cli.py -o table
+
+    Output untuk hasil scrape di website infeksiemerging saat ini berupa table saja. 
+
 Thanks To
 ---
 - kawan-kawan di KawalCovid19
 
 TO DO
 ---
-- Mengumpulkan data untuk clustering berdasar wilayah
+- Mengumpulkan data untuk clustering berdasar wilayah (terbentur peraturan)
