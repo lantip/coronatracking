@@ -129,7 +129,7 @@ def main():
             if attrib['Jumlah_Kasus_Baru_per_Hari']:
                 tabel = [ attrib['Hari_ke'], attrib['Jumlah_Kasus_Baru_per_Hari'], attrib['Jumlah_Kasus_Kumulatif'], attrib['Jumlah_Pasien_Sembuh'], attrib['Jumlah_Pasien_Meninggal'], attrib['Jumlah_pasien_dalam_perawatan'] ]
     if len(tabel) < 1:
-        print('Data hari ini belum diumumkan. Data hari kemarin adalah')
+        print('Data hari ini belum diumumkan. \nData hari kemarin adalah')
         for tbl in features:
             attrib = tbl['attributes']
             if attrib['Hari_ke'] == (int(sisa.days) - 1):
